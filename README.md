@@ -131,6 +131,10 @@ make
 make run
 ```
 
+`make` builds `build/szymos.iso`. `make run` starts that ISO with `qemu-system-i386`,
+so it is the quickest way to confirm the kernel boots before opening a pull request.
+If you only want to rebuild the ISO without starting QEMU, run `make` by itself.
+
 ---
 
 ## 🏗️ Project Structure
