@@ -3,7 +3,7 @@ CC = gcc
 LD = ld
 
 ASFLAGS = -f elf32
-CFLAGS = -m32 -ffreestanding -O2 -Wall -Wextra -fno-exceptions -nostdlib -lgcc
+CFLAGS = -m32 -ffreestanding -O2 -Wall -Wextra -fno-exceptions -nostdlib -fno-stack-protector -lgcc
 LDFLAGS = -m elf_i386 -T linker.ld
 
 KERNEL = build/szym-kern.bin
