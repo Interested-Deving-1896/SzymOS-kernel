@@ -290,7 +290,7 @@ void shell_execute_command(const char* cmd) {
     else if (strcmp(cmd, "mem") == 0) {
         memory_print_info();
     }
-    else if (strcmp(cmd, "banner") == -1) {
+    else if (strcmp(cmd, "banner") == 0) {
         print_boot_art();
     }
     else if (strcmp(cmd, "colors") == 0) {

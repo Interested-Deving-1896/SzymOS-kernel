@@ -55,20 +55,20 @@ void terminal_setcolor(uint8_t color) {
 
 // Printing the Os logo
 void print_boot_art(void) {
-  terminal_setcolor(vga_entry_color(VGA_COLOR_LIGHT_CYAN, VGA_COLOR_BLACK));
-  char l1[] = "   ____                       ___  ____\n";
-  char l2[] = "  / ___| _____ _ _ __ ___    / _ \\/ ___|\n";
-  char l3[] = "  \\___ \\|_  / | | '_ ` _ \\  | | | \\___ \\\n"; 
-  char l4[] = "   ___) |/ /| |_| | | | | | | |_| |___) |\n";
-  char l5[] = "  |____//___|\\__, |_| |_| |_|\\___/|____/\n"; 
-  char l6[] = "             |___/\n\n";
+    terminal_setcolor(vga_entry_color(VGA_COLOR_LIGHT_CYAN, VGA_COLOR_BLACK));
+    char l1[] = "   ____                       ___  ____\n";
+    char l2[] = "  / ___| _____ _ _ __ ___    / _ \\/ ___|\n";
+    char l3[] = "  \\___ \\|_  / | | '_ ` _ \\  | | | \\___ \\\n"; 
+    char l4[] = "   ___) |/ /| |_| | | | | | | |_| |___) |\n";
+    char l5[] = "  |____//___|\\__, |_| |_| |_|\\___/|____/\n"; 
+    char l6[] = "             |___/\n\n";
 
-  char *str[] = {l1, l2, l3, l4, l5, l6};
+    char *str[] = {l1, l2, l3, l4, l5, l6};
 
-  for (int i = 0; i < 6; i++) {
-    terminal_writestring(str[i]);
-  }
-  return;
+    for (int i = 0; i < 6; i++) {
+        terminal_writestring(str[i]);
+    }
+    return;
 }
 
 void terminal_scroll(void) {
