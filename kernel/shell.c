@@ -56,7 +56,7 @@ void cmd_colors(void) {
     
     for (int i = 0; i < 16; i++) {
         terminal_setcolor(vga_entry_color(i, VGA_COLOR_BLACK));
-        terminal_printf("  ██  ");
+        terminal_printf("  Color test  ");
         terminal_setcolor(vga_entry_color(VGA_COLOR_WHITE, VGA_COLOR_BLACK));
         terminal_printf(" %d: %s\n", i, color_names[i]);
     }

@@ -117,6 +117,25 @@ void kernel_main(uint32_t magic, uint32_t addr) {
     
     // Initialize filesystem IMMEDIATELY after selection, don't do anything else first
     fs_init();
+
+    // Create README.txt on first boot if it doesn't exist
+    if (!fs_file_exists("README.txt")) {
+        fs_create_file("README.txt",
+            "SzymOS is a custom operating system kernel built from scratch, "
+            "focused on being fast, clean, and extensible. This project is aimed "
+            "at building a serious low-level system with real functionality, while "
+            "keeping the codebase approachable enough for contributors to extend "
+            "and improve. "
+            "| Core Focus: Performance and simplicity. Clean, understandable "
+            "architecture. Real hardware support. Expandable system design. "
+            "| Features: Bootable on real x86 hardware. Persistent filesystem (SzymFS). "
+            "Interactive shell with 16+ commands. CPU, memory, and disk detection "
+            "VGA text-mode interface (80x25). Keyboard driver (QWERTY + shift support). "
+            "File operations (create, read, delete).");
+        terminal_setcolor(vga_entry_color(VGA_COLOR_LIGHT_CYAN, VGA_COLOR_BLACK));
+        terminal_writestring("[OK] README.txt created\n");
+        terminal_setcolor(vga_entry_color(VGA_COLOR_WHITE, VGA_COLOR_BLACK));
+    }
     
     // Initialize and run shell
     shell_init();
