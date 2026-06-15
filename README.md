@@ -1,233 +1,75 @@
-# SzymOS
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# SzymOS-kernel
 
-```
- ____                      ___  ____  
-/ ___|_____   _ _ __ ___  / _ \/ ___| 
-\___ \_  / | | | '_ ` _ \| | | \___ \ 
- ___) / /| |_| | | | | | | |_| |___) |
-|____/___|\__, |_| |_| |_|\___/|____/ 
-          |___/                       
-```
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/SzymOS-kernel)
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Platform](https://img.shields.io/badge/platform-x86-lightgrey.svg)
-![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-**SzymOS** is a custom operating system kernel built from scratch, focused on being **fast, clean, and extensible**.
+## Architecture
 
-This project is aimed at building a **serious low-level system** with real functionality, while keeping the codebase approachable enough for contributors to extend and improve.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
----
+## Install
 
-## 🌟 Core Focus
-
-* Performance and simplicity
-* Clean, understandable architecture
-* Real hardware support
-* Expandable system design
-
----
-
-## ✨ Features
-
-* Bootable on real x86 hardware
-* Persistent filesystem (SzymFS)
-* Interactive shell with 16+ commands
-* CPU, memory, and disk detection
-* VGA text-mode interface (80x25)
-* Keyboard driver (QWERTY + shift support)
-* File operations (create, read, copy, move, delete)
-
----
-
-## 🖥️ System Demonstration
-
-### GRUB Bootloader
-![GRUB Boot](screenshots/grub-boot.png)
-
-The system is loaded via GRUB, allowing boot selection and kernel entry.
-
----
-
-### Kernel Boot
-![Boot](screenshots/boot.png)
-
-SzymOS initializes core subsystems including memory, VGA output, and input drivers.
-
----
-
-### First Boot
-![First Boot](screenshots/first-boot.png)
-
-Initial system state after first successful boot into the kernel shell.
-
----
-
-### Command Interface
-![Commands](screenshots/commands.png)
-
-Interactive shell demonstrating core system commands and file operations.
-
----
-
-### Saving Data to Disk
-![Save to Disk](screenshots/saving-to-disk-demonstration.png)
-
-Files are written to persistent storage using SzymFS.
-
----
-
-### System Reboot
-At this stage, the system was rebooted to verify persistence.
-
----
-
-### After Reboot
-![After Reboot](screenshots/after-reboot.png)
-
-System state after reboot, confirming that data was retained.
-
----
-
-### Persistent Storage Demonstration
-![Persistent Storage](screenshots/persistent-storage-demonstration.png)
-
-Previously saved data is successfully reloaded from disk.
-
----
-
-### Kernel Panic Demonstration
-![Kernel Panic](screenshots/kernel-panic-demonstration.png)
-
-This kernel panic was intentionally triggered by executing the `panic` command to demonstrate system error handling and crash state output.
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-#### Ubuntu / Debian / WSL
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-sudo apt update
-sudo apt install build-essential nasm grub-pc-bin xorriso qemu-system-x86 gcc-multilib
-```
-
-#### Arch Linux
-
-```bash
-sudo pacman -S base-devel nasm grub xorriso qemu-system-x86
-```
-
-### Build and Run
-
-```bash
-git clone https://github.com/Szymdows/SzymOS-kernel.git
+git clone https://github.com/Interested-Deving-1896/SzymOS-kernel.git
 cd SzymOS-kernel
-
-make clean
-make
-make run
 ```
 
-`make` builds `build/szymos.iso`. `make run` starts that ISO with `qemu-system-i386`,
-so it is the quickest way to confirm the kernel boots before opening a pull request.
-If you only want to rebuild the ISO without starting QEMU, run `make` by itself.
+## Usage
 
----
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-## 🏗️ Project Structure
+## Configuration
 
-```text
-SzymOS-kernel/
-├── boot/        # Boot entry
-├── kernel/      # Core kernel logic
-├── include/     # Headers
-├── linker.ld
-├── grub.cfg
-├── Makefile
-└── README.md
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/SzymOS-kernel`](https://github.com/Interested-Deving-1896/SzymOS-kernel) and mirrored through:
+
+```
+Interested-Deving-1896/SzymOS-kernel  ──►  OpenOS-Project-OSP/SzymOS-kernel  ──►  OpenOS-Project-Ecosystem-OOC/SzymOS-kernel
 ```
 
----
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-## 🤝 Contributing
+## Contributors
 
-This project is open to contributors who want to **build real low-level systems**, not just experiment.
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-### Where You Can Help
+## Origins
 
-#### 🟢 Entry-Level
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
 
-* Improve documentation clarity
-* Add or refine shell commands
-* Fix bugs or edge cases
+## Resources
 
-#### 🟡 Intermediate
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
-* Extend filesystem functionality
-* Improve hardware support
-* Enhance shell capabilities
+## License
 
-#### 🔴 Advanced
-
-* Memory management
-* Multitasking
-* Driver development
-* 64-bit support
-
----
-
-## 🛠️ Workflow
-
-```bash
-git clone https://github.com/Szymdows/SzymOS-kernel.git
-cd SzymOS-kernel
-
-git checkout -b feature/your-change
-
-make clean
-make run
-
-git commit -m "Describe your change"
-git push origin feature/your-change
-```
-
-Open a Pull Request once ready.
-
----
-
-## 💡 Guidelines
-
-* Keep code simple and readable
-* Avoid unnecessary complexity
-* Test changes before submitting
-* Keep commits focused and clear
-
----
-
-## 🐛 Current Limitations
-
-* BIOS only (no UEFI)
-* Limited SATA support
-* Max file size: 4KB
-* No directories yet
-* No multitasking
-
----
-
-## 🎯 Direction
-
-SzymOS is being developed as a **clean, extensible kernel project** with the goal of evolving into a more complete operating system over time.
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-⭐ Star the project if you're interested in contributing or following its progress.
-
+<!-- AI:start:license -->
+[MIT](https://github.com/Interested-Deving-1896/SzymOS-kernel/blob/main/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
